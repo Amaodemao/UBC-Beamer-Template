@@ -1,0 +1,31 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ubccolor}[2026/09/23 UBC presentation colours]
+
+\RequirePackage{xcolor}
+
+% Official UBC screen palette: https://brand.ubc.ca/guidelines/downloads/ubc-colour-and-fonts/
+\definecolor{ubcblue}{HTML}{002145}
+\definecolor{ubcsecondary}{HTML}{0055B7}
+\definecolor{ubcsky}{HTML}{00A7E1}
+\definecolor{ubclightblue}{HTML}{97D4E9}
+
+% Neutral surfaces and semantic alert colour are template choices.
+\definecolor{ubctext}{HTML}{303840}
+\definecolor{ubcgrey}{HTML}{F1F3F5}
+\definecolor{ubcmuted}{HTML}{58636E}
+\definecolor{ubcalert}{HTML}{B33A3A}
+\colorlet{maincolor}{ubcblue}
+
+% Retain old colour names for documents using the original public commands.
+\colorlet{sintefgrey}{ubcgrey}
+\colorlet{sintefgray}{ubcgrey}
+\colorlet{sinteflightgrey}{ubcgrey}
+\colorlet{sinteflightgray}{ubcgrey}
+\colorlet{sinteflightgreen}{ubclightblue}
+\colorlet{sintefgreen}{ubcsecondary}
+\colorlet{sintefdarkgreen}{ubcblue}
+\colorlet{sintefyellow}{ubcsecondary}
+\colorlet{sintefred}{ubcalert}
+\colorlet{sinteflilla}{ubcblue}
+\colorlet{sintefcyan}{ubcsky}
+\colorlet{sintefmagenta}{ubcalert}

@@ -1,0 +1,17 @@
+/香港中文大学中文模版CUHK_Beamer_Template/
+/assets/legacy-cuhk/
+/build/
+/tmp/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
