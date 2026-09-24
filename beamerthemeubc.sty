@@ -48,7 +48,7 @@
 \setbeamertemplate{footline}{%
   \begin{beamercolorbox}[wd=\paperwidth,ht=4mm,dp=3mm,rightskip=1cm,leftskip=1cm]{footline}
   \usebeamerfont{footline}
-  \insertframenumber/\inserttotalframenumber
+  \raisebox{2mm}{\insertframenumber/\inserttotalframenumber}
   \ifstrempty{\@footlinepayoff}{}{%
     \usebeamerfont{footline}\hfill\@footlinepayoff
   }
@@ -134,7 +134,7 @@
 \setbeamertemplate{headline}{%
   \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=north east,inner sep=0pt] at
-      ([xshift=-5mm,yshift=-2mm]current page.north east)
+      ([xshift=-8mm,yshift=-3mm]current page.north east)
       {\pgfuseimage{\@logo}};
   \end{tikzpicture}%
   \vskip3mm
@@ -169,13 +169,12 @@
       \begin{minipage}{\ifdefempty{\@TitleBackground}{0.86\paperwidth}{0.48\paperwidth}}
         \raggedright\color{white}
         {\usebeamerfont{title}\inserttitle\par}
-        \ifdefempty{\insertsubtitle}{}{\vspace{3mm}{\usebeamerfont{subtitle}\insertsubtitle\par}}
-        \ifdefempty{\@courseLabel}{}{\vspace{2mm}{\usebeamerfont{subtitle}\@courseLabel\par}}
-        \vspace{7mm}
+        \ifdefempty{\insertsubtitle}{}{\usebeamerfont{subtitle}\insertsubtitle\par}
+        \ifdefempty{\@courseLabel}{}{\usebeamerfont{subtitle}\@courseLabel\par}
+        \vspace{1mm}
         {\usebeamerfont{author}\textbf{\insertauthor}\ifdefempty{\@IDnumber}{}{ (\@IDnumber)}\par}
-        \ifdefempty{\insertinstitute}{}{\vspace{1mm}{\usebeamerfont{author}\insertinstitute\par}}
-        \ifdefempty{\@supervisor}{}{\vspace{1mm}{\usebeamerfont{author}Supervisor: \textbf{\@supervisor}\par}}
-        \vspace{4mm}
+        \ifdefempty{\insertinstitute}{}{\usebeamerfont{author}\insertinstitute\par}
+        \ifdefempty{\@supervisor}{}{\usebeamerfont{author}Supervisor: \textbf{\@supervisor}\par}
         {\usebeamerfont{date}\insertdate\par}
       \end{minipage}%
     };
@@ -221,6 +220,7 @@
 \begingroup
   \setbeamercolor{normal text}{fg=white,bg=ubcblue}
   \setbeamercolor{footline}{fg=white,bg=}
+  \setbeamertemplate{footline}{}
   \setbeamertemplate{headline}{}
   \ifdefempty{\@TitleBackground}{}{% Skip if \@TitleBackground is empty
     \setbeamertemplate{background}{%
@@ -314,22 +314,31 @@
 }
 
 % Define backmatter
-\newcommand{\backmatter}[1][]{
-\begingroup
-  \themecolor{main}
-  \begin{frame}[c]
-    \centering
-    \begin{minipage}{\textwidth}
-      \usebeamercolor[fg]{normal text}
-      \centering
-      \ifstrequal{#1}{notitle}{}{
-        \Huge \inserttitle
-        \vspace{5mm}
-      }
-      \Large \textsl{\\Thank you for listening! \\ Any questions?}
-    \end{minipage}
-  \end{frame}
-\endgroup
+\newcommand{\backmatter}[1][]{%
+  \begingroup
+    \themecolor{main}
+    \begin{frame}[plain]
+      % A plain frame suppresses the headline, so place the crest directly.
+      \begin{tikzpicture}[remember picture,overlay]
+        \node[anchor=north east,inner sep=0pt] at
+          ([xshift=-8mm,yshift=-3mm]current page.north east)
+          {\pgfuseimage{\@logo}};
+      \end{tikzpicture}%
+      \noindent
+      \begin{minipage}[c][\paperheight][c]{\textwidth}
+        \usebeamercolor[fg]{normal text}
+        \centering
+        \ifstrequal{#1}{notitle}{}{%
+          {\Huge \inserttitle\par}
+          \vspace{5mm}
+        }
+        {\Large\itshape
+          Thank you for listening!\par
+          Any questions?\par
+        }
+      \end{minipage}
+    \end{frame}
+  \endgroup
 }
 
 % Define sectioning and table of contents
