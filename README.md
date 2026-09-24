@@ -1,17 +1,6 @@
 # UBC-Beamer-Template
 This is a beamer template adapted for the University of British Columbia (UBC).
 
-## Build
-
-Compile from the repository root with TeX Live and XeLaTeX:
-
-```sh
-latexmk -xelatex -interaction=nonstopmode -halt-on-error -outdir=build beamerUBC.tex
-```
-
-The result is `build/beamerUBC.pdf`. On Overleaf, choose `beamerUBC.tex` as
-the main document and XeLaTeX as the compiler.
-
 ## Files
 
 - `beamerUBC.tex`: packages, presentation metadata and document entry point.
@@ -21,9 +10,6 @@ the main document and XeLaTeX as the compiler.
 - `assets/ubc/`: official vector logos and the Vancouver campus photograph.
 - `assets/ubc/SOURCES.md`: source URLs and asset notes.
 - `bibliography.bib`: example references.
-
-The original CUHK directory and `assets/legacy-cuhk/` are local reference
-copies excluded from Git. The UBC theme does not depend on either directory.
 
 ## Visual Style
 
