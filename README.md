@@ -1,4 +1,5 @@
 # UBC-Beamer-Template
+![UBC Beamer Template cover](cover.png)
 This is a beamer template adapted for the University of British Columbia (UBC).
 
 ## Files
@@ -9,6 +10,7 @@ This is a beamer template adapted for the University of British Columbia (UBC).
 - `ubccolor.sty`: UBC blues plus neutral and semantic colours.
 - `assets/ubc/`: vector logos and the Vancouver campus photograph.
 - `assets/ubc/SOURCES.md`: source URLs and asset notes.
+- `cover.png`: README cover image.
 - `bibliography.bib`: example references.
 
 ## Visual Style
