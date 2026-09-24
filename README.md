@@ -21,4 +21,4 @@ blocks. The page is 20 cm by 11.25 cm (16:9).
 ## Acknowledgments & License
 This template is modified from [CUHK-Beamer-Template](https://www.overleaf.com/latex/templates/xiang-gang-zhong-wen-da-xue-zhong-wen-mo-ban-cuhk-beamer-template/bpgghjpjkqxw) by Richard Fury.
 
-Modifications by [Haonan Bai] (2026) are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Modifications by Haonan Bai are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
