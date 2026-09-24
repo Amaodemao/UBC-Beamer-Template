@@ -13,13 +13,6 @@ This is a beamer template adapted for the University of British Columbia (UBC).
 - `cover.png`: README cover image.
 - `bibliography.bib`: example references.
 
-## Visual Style
-
-The cover uses UBC Blue (`#002145`). Uncomment the
-`\titlebackground*` line for the optional campus-photo cover.
-Content slides use a white background, a blue crest, dark text and neutral
-blocks. The page is 20 cm by 11.25 cm (16:9).
-
 ## Acknowledgments & License
 This template is modified from [CUHK-Beamer-Template](https://www.overleaf.com/latex/templates/xiang-gang-zhong-wen-da-xue-zhong-wen-mo-ban-cuhk-beamer-template/bpgghjpjkqxw) by Richard Fury.
 
