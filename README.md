@@ -38,6 +38,6 @@ and public commands remain in place. The theme name is now `ubc`;
 legacy `sintef...` colour aliases remain available in `ubccolor.sty`.
 
 ## Acknowledgments & License
-This template is modified from [CUHK-Beamer-Template](https://www.overleaf.com/latex/templates/xiang-gang-zhong-wen-da-xue-zhong-wen-mo-ban-cuhk-beamer-template/bpgghjpjkqxw) by [Richard Fury], originally licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+This template is modified from [CUHK-Beamer-Template](https://www.overleaf.com/latex/templates/xiang-gang-zhong-wen-da-xue-zhong-wen-mo-ban-cuhk-beamer-template/bpgghjpjkqxw) by Richard Fury.
 
 Modifications by [Haonan Bai] (2026) are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
