@@ -1,16 +1,13 @@
 \begin{frame}{\strut} % \strut是用来生成不可见标题的占位符
 \framesubtitle{\strut} % 清除模板自动生成的章节副标题
 
-This template is a based on \hrefcol{https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx}{SINTEF Presentation} from \hrefcol{mailto:federico.zenith@sintef.no}{Federico Zenith} and its derivation \hrefcol{https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes}{Beamer-LaTeX-Themes} from Liu Qilong
+This template is a based on \hrefcol{https://www.overleaf.com/latex/templates/xiang-gang-zhong-wen-da-xue-zhong-wen-mo-ban-cuhk-beamer-template/bpgghjpjkqxw}{the CUHK Beamer Template} 
+by \hrefcol{https://richardfury.github.io/}{Rui HU}, which is an adaptation to \hrefcol{https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx}{SINTEF Presentation} 
+from \hrefcol{mailto:federico.zenith@sintef.no}{Federico Zenith}, and its derivation \hrefcol{https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes}{Beamer-LaTeX-Themes} from Liu Qilong.
 
 \vspace{\baselineskip}
 
-CUHK style adaptation contributed by \hrefcol{https://richardfury.github.io/}{Rui HU}
-
-\vspace{\baselineskip}
-
-UBC variation by Haonan Bai (2026). The examples below retain the original
-template's frame, chapter, side-picture and citation workflows.
+UBC style adaptation contributed by \hrefcol{https://www.hnbai.com/}{Haonan Bai} in 2026. 
 
 \end{frame}
 
@@ -314,8 +311,13 @@ them)}}
 
 \section{Reference}
 
+\makeatletter
+\renewcommand{\@biblabel}[1]{[\number\numexpr\value{enumiv}+1\relax]}
+\makeatother
+
 \begin{frame}[allowframebreaks]{References}
 \tiny
-\bibliographystyle{apalike}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\bibliographystyle{ACM-Reference-Format}
 \bibliography{bibliography}
 \end{frame}

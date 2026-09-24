@@ -48,7 +48,7 @@
 \setbeamertemplate{footline}{%
   \begin{beamercolorbox}[wd=\paperwidth,ht=4mm,dp=3mm,rightskip=1cm,leftskip=1cm]{footline}
   \usebeamerfont{footline}
-  \raisebox{2mm}{\insertframenumber/\inserttotalframenumber}
+  \insertframenumber/\inserttotalframenumber
   \ifstrempty{\@footlinepayoff}{}{%
     \usebeamerfont{footline}\hfill\@footlinepayoff
   }
@@ -346,6 +346,7 @@
 {
     \begingroup
     \themecolor{main}
+    \setbeamertemplate{footline}{}
     \begin{frame}{Table of Contents}
         \tableofcontents[currentsection]
     \end{frame}
